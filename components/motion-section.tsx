@@ -22,10 +22,10 @@ export function MotionSection({
     <motion.section
       id={id}
       className={className}
-      initial={shouldReduceMotion ? false : { opacity: 0, y: 44 }}
-      whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
+      initial={shouldReduceMotion ? false : { opacity: 0, y: 58, filter: "blur(10px)" }}
+      whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0, filter: "blur(0px)" }}
       viewport={{ once: true, margin: "-12% 0px" }}
-      transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1], delay }}
+      transition={{ duration: 1.35, ease: [0.16, 1, 0.3, 1], delay }}
     >
       {children}
     </motion.section>
